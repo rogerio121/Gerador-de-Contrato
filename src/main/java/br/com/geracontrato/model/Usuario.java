@@ -1,8 +1,15 @@
 package br.com.geracontrato.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+
+@Entity
 public class Usuario extends Pessoa{
 	
+	@Column(name = "usu_nome")
 	String email;
+	
+	@Column(name = "usu_senha")
 	String senha;
 	
 	

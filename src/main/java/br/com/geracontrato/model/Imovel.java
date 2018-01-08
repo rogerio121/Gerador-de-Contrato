@@ -1,17 +1,48 @@
 package br.com.geracontrato.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name = "imovel")
 public class Imovel {
 	
+	@Id
+	@GeneratedValue
 	int idImovel;
+	
+	@Column(name = "imov_numero")
 	int numero;
+	
+	@Column(name = "imov_comodos")
 	int comodos;
+	
+	@Column(name = "imov_valor_numero")
 	double valorEmNumero;
+	
+	@Column(name = "imov_rua")
 	String rua;
+	
+	@Column(name = "imov_bairro")
 	String bairro;
+	
+	@Column(name = "imov_cidade")
 	String cidade;
+	
+	@Column(name = "imov_uf")
 	String uf;
+	
+	@Column(name = "imov_cep")
 	String cep;
+	
+	@Column(name = "imov_valor_extenso")
 	String valorExtenso;
+	
+	@Column(name = "usu_cpf")
 	String cpfUsuario;
 	
 	

@@ -1,7 +1,14 @@
 package br.com.geracontrato.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Inquilino extends Pessoa{
 	
+	@Id
+	@Column(name = "imov_id")
 	int idImovel;
 
 	

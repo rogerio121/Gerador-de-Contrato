@@ -4,7 +4,7 @@ import javax.persistence.Persistence;
 
 public class TestaConexao {
 	public static void main(String[] args) {
-		EntityManagerFactory factory = Persistence.createEntityManagerFactory("conectaPercistence");
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory("conectaPersistence");
 			System.out.println("Acessou");
 	}
 
