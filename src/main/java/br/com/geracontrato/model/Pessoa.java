@@ -1,8 +1,13 @@
 package br.com.geracontrato.model;
 
+import javax.persistence.MappedSuperclass;
+
+@MappedSuperclass
 public class Pessoa {
 
 	String nome;
+	
+	@Id
 	String cpf;
 	String rg;
 	String estadoCivil;

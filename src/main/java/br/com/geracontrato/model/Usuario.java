@@ -3,10 +3,10 @@ package br.com.geracontrato.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 
-@Entity
+//@Entity
 public class Usuario extends Pessoa{
 	
-	@Column(name = "usu_nome")
+	/*@Column(name = "usu_nome")
 	String email;
 	
 	@Column(name = "usu_senha")
@@ -35,6 +35,6 @@ public class Usuario extends Pessoa{
 	public Usuario(String pNome, String pCpf, String pRg, String pEstadoCivil) {
 		super(pNome, pCpf, pRg, pEstadoCivil);
 		// TODO Auto-generated constructor stub
-	}
+	}*/
 	
 }
