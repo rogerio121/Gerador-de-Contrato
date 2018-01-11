@@ -1,5 +1,6 @@
 package br.com.geracontrato.model;
 
+import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 
 @MappedSuperclass
