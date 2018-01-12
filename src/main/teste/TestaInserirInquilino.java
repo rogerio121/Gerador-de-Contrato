@@ -16,7 +16,7 @@ public static void main(String[] args) {
 
 	InquilinoDao dao = new InquilinoDao();
 
-	dao.inserir(inquilino);
+	dao.insert(inquilino);
 	
 	System.out.println("Salvo com sucesso");
 }
