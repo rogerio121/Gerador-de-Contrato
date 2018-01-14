@@ -1,3 +1,4 @@
+package inquilino;
 import br.com.geracontrato.dao.InquilinoDao;
 import br.com.geracontrato.model.Inquilino;
 

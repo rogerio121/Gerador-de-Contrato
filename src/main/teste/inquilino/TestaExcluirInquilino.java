@@ -1,3 +1,4 @@
+package inquilino;
 import br.com.geracontrato.dao.InquilinoDao;
 
 public class TestaExcluirInquilino {

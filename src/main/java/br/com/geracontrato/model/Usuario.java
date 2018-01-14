@@ -5,6 +5,8 @@ import javax.persistence.AttributeOverrides;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+// Usuário e tambem o Locador do imóvel
+
 
 @Entity
 @Table(name = "usuario")
