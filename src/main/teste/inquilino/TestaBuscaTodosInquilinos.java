@@ -1,4 +1,4 @@
-package inquilino;
+package Inquilino;
 import java.util.List;
 
 import br.com.geracontrato.dao.InquilinoDao;
