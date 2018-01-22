@@ -1,4 +1,4 @@
-package Imovel;
+package imovel;
 
 import br.com.geracontrato.dao.ImovelDao;
 

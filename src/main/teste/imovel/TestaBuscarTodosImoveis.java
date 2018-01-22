@@ -1,4 +1,4 @@
-package Imovel;
+package imovel;
 
 import java.util.List;
 
