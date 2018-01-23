@@ -6,7 +6,12 @@
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/webapp"/>
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+<<<<<<< HEAD
         <property name="java-output-path" value="/Gerador-de-Contrato/target/classes"/>
+=======
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/java"/>
+>>>>>>> 0c3375666c886d1567743f0588be602003b54746
         <property name="context-root" value="geracontrato"/>
+        <property name="java-output-path" value="/geracontrato/target/classes"/>
     </wb-module>
 </project-modules>
