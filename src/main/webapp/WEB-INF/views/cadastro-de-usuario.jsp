@@ -8,7 +8,7 @@
 </head>
 <body>
 
-	<form>
+	<form action="cadastro-de-usuario"  method="post">
 
 		Nome completo: <input type="text" name="nome" id="usuNome"> <br>
 		R.G: <input type="text" name="rg" id="usuRg"> <br>

@@ -16,7 +16,7 @@
 		<input type="submit" value="Salvar"> <br>
 
 		<a href="">Esqueci minha senha</a>
-		<a href="/view/foi.jsp">Cadastrar usuário</a>	
+		<a href="cadastro">Cadastrar usuário</a>	
 	</form>
 </body>
 </html>
