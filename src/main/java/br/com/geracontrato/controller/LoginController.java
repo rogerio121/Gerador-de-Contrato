@@ -12,7 +12,7 @@ import br.com.geracontrato.model.Usuario;
 public class LoginController {
 
 
-	@RequestMapping("login")
+	@RequestMapping("/")
 	public String login() {
 		
 		return "login";
@@ -25,10 +25,11 @@ public class LoginController {
 	}
 	
 	@RequestMapping("cadastro-usuario")
-	public void cadastroUsuario(Usuario usuario) {
+	public String cadastroUsuario(Usuario usuario) {
 		
 		UsuarioDao dao = new UsuarioDao();
 		dao.insert(usuario);
 		
+		return "login";
 	}
 }

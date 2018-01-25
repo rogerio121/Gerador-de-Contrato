@@ -8,7 +8,7 @@
 </head>
 <body>
 
-	<form action="cadastro-de-usuario"  method="post">
+	<form action="cadastro-usuario"  method="post">
 
 		Nome completo: <input type="text" name="nome" id="usuNome"> <br>
 		R.G: <input type="text" name="rg" id="usuRg"> <br>
@@ -17,7 +17,7 @@
 		Estádo civíl: <input type="text" name="estadoCivil" id="usuEstadoCivil"> <br>
 
 		Senha: <input type="password" name="senha" id="usuSenha"> <br>
-		Confirme a Senha: <input type="password" name="confirmaSenha" id="usuConfirmasenha"> <br>
+<!-- 		Confirme a Senha: <input type="password" name="confirmaSenha" id="usuConfirmasenha"> <br> -->
 
 		<input type="submit" value="Salvar">
 		<button>Cancelar</button>

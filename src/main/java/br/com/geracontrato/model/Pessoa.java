@@ -46,14 +46,6 @@ public class Pessoa {
 	}
 	
 	
-	
-	public Pessoa(String pNome, String pCpf, String pRg, String pEstadoCivil) {
-		this.nome = pNome;
-		this.cpf = pCpf;
-		this.rg = pRg;
-		this.estadoCivil = pEstadoCivil;
-	}
-	
 	public Pessoa() {
 		super();
 	}

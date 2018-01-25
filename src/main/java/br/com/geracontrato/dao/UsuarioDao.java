@@ -57,5 +57,14 @@ public class UsuarioDao {
 		return usuarios;
 	}
 	
+	public Usuario buscarUsuarioPorSenhaEemail(String emailP, String senhaP){
+		Query query = manager.createQuery("SELECT u FROM Usuario as u WHERE u.email = ? AND u.senha = ?");
+		query.setParameter(1, emailP);
+		query.setParameter(2, senhaP);
+	    Usuario usuarioReturn = (Usuario) query.getSingleResult();
+		
+		return usuarioReturn;
+	}
+	
 	
 }
