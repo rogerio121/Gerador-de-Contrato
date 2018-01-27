@@ -13,6 +13,7 @@ public class Imovel {
 	
 	@Id
 	@GeneratedValue
+	@Column(name = "imov_id")
 	int idImovel;
 	
 	@Column(name = "imov_numero")

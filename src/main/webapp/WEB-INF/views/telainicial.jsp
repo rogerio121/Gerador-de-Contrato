@@ -7,6 +7,19 @@
 <title>Insert title here</title>
 </head>
 <body>
-	Foi carai
+	<h3>Bem vindo  ${usuario.nome} ${usuario.cpf}</h3>
+	<br/><br/><br/><br/><br/>
+	
+	<div>
+	Consultar <br/>
+	<a>Inquilinos</a><br/>
+	<a>Imoveis</a>
+	</div>
+	
+	<div>
+	Cadastro <br/>
+	<a href="cadastro-inquilino">Inquilinos</a><br/>
+	<a href="cadastro-imovel?cpf=${usuario.cpf}">Imoveis</a>
+	</div>
 </body>
 </html>

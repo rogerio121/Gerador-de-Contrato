@@ -1,0 +1,50 @@
+@charset "ISO-8859-1";
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background: #1C1C1C;
+	font-family: Arial;
+	color: white;
+}
+
+a {
+	color: white;
+	font-size: 12px;
+}
+
+button {
+	display: block;
+	width: 100px;
+	height: 26px;
+	font-weight: bold;
+	color: white;
+	background-color: #1874CD;
+	border: none;
+}
+
+#corpoLogin {
+	overflow: hidden;
+}
+
+#caixaDeLogin {
+	background: #4F4F4F;
+	position: absolute;
+	right: 0%;
+	width: 35%;
+	height: 100%;
+	padding-top: 10%;
+}
+
+#tabelaLogin {
+	border-spacing: 40px;
+	margin-left: 15%;
+}
+
+#divRefLoogin {
+	margin: 0 auto;
+	width: 50%;
+}

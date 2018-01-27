@@ -7,15 +7,16 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
-import br.com.geracontrato.dao.UsuarioDao;
-import br.com.geracontrato.model.Usuario;
+import br.com.geracontrato.dao.*;
+import br.com.geracontrato.model.*;
 
 
 @Controller
 public class LoginController {
 
-
+	//Tela de Login
 	@RequestMapping("/")
 	public String login() {
 
@@ -28,18 +29,8 @@ public class LoginController {
 		return "cadastro-de-usuario";
 	}
 
-	@RequestMapping("cadastro-usuario")
-	public String cadastroUsuario(Usuario usuario) {
-
-		UsuarioDao dao = new UsuarioDao();
-		dao.insert(usuario);
-
-		return "login";
-	}
-	
-
 	@RequestMapping("telainicial")
-	public String cadastroUsuario(HttpServletRequest req, HttpServletResponse res) {
+	public ModelAndView  efetuarLogin(HttpServletRequest req, HttpServletResponse res) {
 
 		UsuarioDao dao = new UsuarioDao();
 		Usuario usuario = new Usuario();
@@ -47,15 +38,80 @@ public class LoginController {
 		String senha = req.getParameter("senha");
 		String pagina = "";
 
+		ModelAndView mv = new ModelAndView("login");
 		try {
 			usuario =  dao.buscarUsuarioPorSenhaEemail(email, senha);
-			if(usuario.getEmail().equals(email) && usuario.getSenha().equals(senha)) {
-				pagina = "telainicial";
-			}
+			System.out.println("foi1");
+			mv = new ModelAndView("telainicial");
+			mv.addObject("usuario", usuario);
+			System.out.println("foi");
 		}
 		catch (Exception e) {
-			pagina = "login";
+			
 		}
-		return pagina;
+		return mv;
+	}
+
+	
+	
+	//Tela de cadastro de Usuario	
+	@RequestMapping("salvar-usuario")
+	public String salvarUsuario(Usuario usuario) {
+		
+		try {
+			UsuarioDao dao = new UsuarioDao();
+			dao.insert(usuario);
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		
+		return "login";
+	}
+
+
+	
+	//Tela Inicial	
+	@RequestMapping("cadastro-inquilino")
+	public String cadastroInquilino() {
+
+		return "cadastro-de-inquilino";
+	}
+
+	@RequestMapping("cadastro-imovel")
+	public ModelAndView cadastroImovel(Usuario usuario) {
+		
+		ModelAndView mv = new ModelAndView("cadastro-de-imovel");
+		mv.addObject(usuario);
+		return mv;
+	}
+
+	
+	
+	//Tela Cadastro de inquilino
+	@RequestMapping("salvar-inquilino")
+	public String salvarInquilino(Inquilino inquilino) {
+
+		try {
+			InquilinoDao dao = new InquilinoDao();
+			dao.insert(inquilino);
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+
+		return "telainicial";
+	}
+
+	//Tela Cadastro de Imóvel
+	@RequestMapping("salvar-imovel")
+	public ModelAndView salvarImovel(Imovel imovel) {
+		ModelAndView mv = new ModelAndView("telainicial");
+		try {
+			ImovelDao dao = new ImovelDao();
+			dao.insert(imovel);
+			
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		return mv;
 	}
 }

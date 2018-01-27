@@ -8,7 +8,7 @@
 </head>
 <body>
 
-	<form action="cadastro-usuario"  method="post">
+	<form action="salvar-usuario"  method="post">
 
 		Nome completo: <input type="text" name="nome" id="usuNome"> <br>
 		R.G: <input type="text" name="rg" id="usuRg"> <br>

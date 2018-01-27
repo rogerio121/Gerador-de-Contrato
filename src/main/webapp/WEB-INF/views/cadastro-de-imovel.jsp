@@ -8,12 +8,13 @@
 </head>
 <body>
 
-	<form>
-
+	<form action="salvar-imovel" method="post">
+	
+		Cpf do Proprietário: <input type="text" name="cpfUsuario" id="idCpfUsuario" value=${usuario.cpf} readonly="true"> <br>
 		Rua: <input type="text" name="rua" id="imovRua"> <br>
 		Bairro: <input type="text" name="bairro" id="imovBairro"> <br>
 		Cidade: <input type="text" name="cidade" id="imovCidade"> <br>
-		UF: <select id="uf">
+		UF: <select name="uf">
 		    <option value="">-- Selecione --</option>
 		    <option value="AC">Acre</option>
 		    <option value="AL">Alagoas</option>
@@ -46,10 +47,10 @@
 		Número: <input type="text" name="numero" id="imovNumero"> <br>
 		CEP: <input type="text" name="cep" id="imovCep"> <br>
 
-		Valor do imóvel em reais: <input type="text" name="vlImovelReais" id="imovVlReais"> <br>
-		Valor do imóvel por extenso: <input type="text" name="vlImovelExtenso" id="imovVlExtenso"> <br>
+		Valor do imóvel em reais: <input type="text" name="valorEmNumero" id="imovVlReais"> <br>
+		Valor do imóvel por extenso: <input type="text" name="valorExtenso" id="imovVlExtenso"> <br>
 
-		Comodos <input type="number" name="qtComodos" id="imovQtComodos"> <br>
+		Comodos <input type="number" name="comodos" id="imovComodos"> <br>
 
 		<input type="submit" value="Salvar">
 		<button>Cancelar</button>

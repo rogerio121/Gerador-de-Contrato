@@ -12,8 +12,10 @@
 
 	<!-- Mapeia os pacotes onde estarão aas classes -->
 	<context:component-scan base-package="br.com.geracontrato" />
-	<!-- possibilita as anotaçoes -->
+	<!-- Possibilita as anotaçoes -->
 	<mvc:annotation-driven />
+	<!-- Defino onde vai ser minha pastaresourxe para o mvc -->
+	<mvc:resources mapping="/resources/**" location="/resources/"/>
 
 	<!-- Mapeia as paginas html -->
 	<bean
