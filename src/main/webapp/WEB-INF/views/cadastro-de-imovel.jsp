@@ -4,6 +4,10 @@
 
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="resources/css/style.css" />
+</head>
+
+<head>
 	<title>Cadastro de usuário</title>
 </head>
 <body>

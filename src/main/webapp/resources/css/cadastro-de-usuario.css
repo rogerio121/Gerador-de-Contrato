@@ -1,0 +1,13 @@
+@charset "ISO-8859-1";
+
+#tabCadastroDeUsuario {
+    margin: 0 auto;
+    width: 500px;
+    position: absolute;
+    top: calc(50% - 200px);
+    left: calc(50% - 250px);
+}
+
+#caixaCadastroUsuario {
+	background-color: #4F4F4F;
+}
