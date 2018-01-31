@@ -5,15 +5,12 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="resources/css/geral.css" />
-<link rel="stylesheet" type="text/css"
-	href="resources/css/cadastro-de-usuario.css" />
-</head>
-
-<head>
+<link rel="stylesheet" type="text/css" href="resources/css/cadastro-de-usuario.css" />
 <title>Cadastro de usuário</title>
 </head>
-<body>
 
+
+<body>
 	<div id="caixaCadastroUsuario">
 		<form action="salvar-usuario" method="post">
 			<table id="tabCadastroDeUsuario">
