@@ -1,9 +1,12 @@
 package br.com.geracontrato.controller;
 
 
+import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,26 +33,23 @@ public class LoginController {
 	}
 
 	@RequestMapping("telainicial")
-	public ModelAndView  efetuarLogin(HttpServletRequest req, HttpServletResponse res) {
-
-		UsuarioDao dao = new UsuarioDao();
-		Usuario usuario = new Usuario();
+	public void  efetuarLogin(HttpServletRequest req, HttpServletResponse res)throws ServletException, IOException {
 		String email = req.getParameter("login");
 		String senha = req.getParameter("senha");
-		String pagina = "";
 
-		ModelAndView mv = new ModelAndView("login");
-		try {
-			usuario =  dao.buscarUsuarioPorSenhaEemail(email, senha);
-			System.out.println("foi1");
-			mv = new ModelAndView("telainicial");
-			mv.addObject("usuario", usuario);
-			System.out.println("foi");
-		}
-		catch (Exception e) {
+		UsuarioDao dao = new UsuarioDao();
+		Usuario usuarioLogado = dao.buscarUsuarioPorSenhaEemail(email, senha);
+
+		if(usuarioLogado != null) {
+			HttpSession sessao = req.getSession();
+			sessao.setAttribute("usuarioLogado", usuarioLogado);
+			sessao.setMaxInactiveInterval(3000);
 			
+			req.getRequestDispatcher("telainicial").forward(req, res);
+
+		}else{
+			req.getRequestDispatcher("").forward(req, res);
 		}
-		return mv;
 	}
 
 	
