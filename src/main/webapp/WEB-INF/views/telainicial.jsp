@@ -10,7 +10,7 @@
 <title>Início</title>
 </head>
 <body>
-	<h3>Bem vindo ${usuario.nome} ${usuario.cpf}</h3>
+	<h3>Bem vindo ${usuarioLogado.nome} ${usuarioLogado.cpf}</h3>
 	<br />
 	<br />
 	<br />
@@ -24,7 +24,7 @@
 	
 		<div>
 			Cadastro <br /> <a href="cadastro-inquilino">Inquilinos</a><br /> <a
-				href="cadastro-imovel?cpf=${usuario.cpf}">Imoveis</a>
+				href="cadastro-imovel">Imoveis</a>
 		</div>
 	</nav>
 </body>

@@ -5,12 +5,11 @@
 
 <html>
 <head>
-	<title>Cadastro de inquilino</title>
+	<title>Cadastro de inquilino </title>
 </head>
 <body>
 
 	<form action="salvar-inquilino">
-
 		Nome completo: <input type="text" name="nome" id="inqNome"> <br>
 		R.G: <input type="text" name="rg" id="inqRg"> <br>
 		CPF: <input type="text" name="cpf" id="inqCpf"> <br>

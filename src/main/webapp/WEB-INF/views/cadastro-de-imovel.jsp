@@ -14,7 +14,7 @@
 
 	<form action="salvar-imovel" method="post">
 	
-		Cpf do Proprietário: <input type="text" name="cpfUsuario" id="idCpfUsuario" value=${usuario.cpf} readonly="true"> <br>
+		<input type="text" name="cpfUsuario" id="idCpfUsuario" value= "${usuarioLogado.cpf}" readonly="true">
 		Rua: <input type="text" name="rua" id="imovRua"> <br>
 		Bairro: <input type="text" name="bairro" id="imovBairro"> <br>
 		Cidade: <input type="text" name="cidade" id="imovCidade"> <br>

@@ -15,7 +15,7 @@ import javax.servlet.http.HttpSession;
 /**
  * Servlet Filter implementation class FiltroController
  */
-@WebFilter("/*")
+@WebFilter("/tetas")
 public class FiltroController implements Filter {
 
     public FiltroController() {
@@ -27,15 +27,6 @@ public void destroy() {
 }
 
 public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-	HttpServletRequest httpServletRequest = (HttpServletRequest) request;
-	String url = httpServletRequest.getRequestURI();
-	
-	HttpSession sessao = httpServletRequest.getSession();
-	if(sessao.getAttribute("usuarioLogado") != null || url.lastIndexOf("login") >-1 || url.lastIndexOf("LoginController") >-1) {
-	chain.doFilter(request, response);	
-}else {
-	((HttpServletResponse) response).sendRedirect("");
-	}
 	
 }
 

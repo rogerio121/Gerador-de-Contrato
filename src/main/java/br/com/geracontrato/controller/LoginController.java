@@ -20,7 +20,7 @@ import br.com.geracontrato.model.*;
 public class LoginController {
 
 	//Tela de Login
-	@RequestMapping("/")
+	@RequestMapping("/login")
 	public String login() {
 
 		return "login";
@@ -33,22 +33,21 @@ public class LoginController {
 	}
 
 	@RequestMapping("telainicial")
-	public void  efetuarLogin(HttpServletRequest req, HttpServletResponse res)throws ServletException, IOException {
+	public String   efetuarLogin(HttpServletRequest req, HttpServletResponse res, HttpSession session) throws ServletException, IOException {
 		String email = req.getParameter("login");
 		String senha = req.getParameter("senha");
-
 		UsuarioDao dao = new UsuarioDao();
-		Usuario usuarioLogado = dao.buscarUsuarioPorSenhaEemail(email, senha);
-
-		if(usuarioLogado != null) {
+		Usuario usuario = dao.buscarUsuarioPorSenhaEemail(email, senha);
+		
+		if(usuario != null) {
 			HttpSession sessao = req.getSession();
-			sessao.setAttribute("usuarioLogado", usuarioLogado);
-			sessao.setMaxInactiveInterval(3000);
+			sessao.setAttribute("usuarioLogado", usuario);
+//			sessao.setMaxInactiveInterval(3000);
 			
-			req.getRequestDispatcher("telainicial").forward(req, res);
+			return "telainicial";
 
 		}else{
-			req.getRequestDispatcher("").forward(req, res);
+			return "redirect:login";
 		}
 	}
 

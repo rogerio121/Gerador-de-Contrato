@@ -35,7 +35,7 @@
 			</table>
 			
 			<dir id="divRefLoogin">
-				<a href="">Esqueci minha senha</a>  <a href="cadastro">Cadastrar usuário</a>
+				<a href="#">Esqueci minha senha</a>  <a href="cadastro">Cadastrar usuário</a>
 			</dir>
 			
 		</form>
